@@ -2,13 +2,13 @@
 
 This is a basic Ruby on Rails app template with the following installed and setup:
 
-Devise
-Simple Form
-Bootstrap
-Jquery
-Fontawesome
-Rolify
-FriendlyId
+- Devise
+- Simple Form
+- Bootstrap
+- Jquery
+- Fontawesome
+- Rolify
+- FriendlyId
 
 Includes a basic Bootstrap theme: https://startbootstrap.com/template-overviews/small-business/
 
