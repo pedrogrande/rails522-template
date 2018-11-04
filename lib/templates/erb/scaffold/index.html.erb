@@ -1,0 +1,29 @@
+<p id="notice"><%%= notice %></p>
+
+<h1><%= plural_table_name.titleize %></h1>
+<%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_route_name %>_path, class: 'btn btn-primary' %>
+<hr>
+<table class="table table-hover">
+  <thead>
+    <tr>
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+      <th><%= attribute.human_name %></th>
+<% end -%>
+      <th colspan="2" width="10%"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+      <tr>
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <td><%%= <%= singular_table_name %>.<%= attribute.column_name %> %></td>
+<% end -%>
+        <td><%%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_<%= singular_route_name %>_path(<%= singular_table_name %>), class: 'btn btn-outline-info text-info btn-sm' %></td>
+        <td><%%= link_to '<i class="fa fa-trash-alt"></i>'.html_safe, <%= model_resource_name %>, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger text-danger btn-sm' %></td>
+      </tr>
+    <%% end %>
+  </tbody>
+</table>
+
+<br>
