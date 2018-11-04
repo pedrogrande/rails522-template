@@ -15,7 +15,7 @@ gem 'sucker_punch', '~> 2.0'
 gem 'exception_notification'
 gem 'friendly_id', '~> 5.2'
 gem "rolify"
-gem 'font-awesome-sass', '~> 4.5.0'
+gem 'font-awesome-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
